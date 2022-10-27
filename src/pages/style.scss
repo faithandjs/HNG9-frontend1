@@ -1,0 +1,28 @@
+body {
+  //   background-color: red;
+}
+.box {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      text-align: center;
+      width: 100%;
+      margin: 15px 0;
+      a {
+        border-radius: 8px;
+        background-color: #eaecf0;
+        padding: 20px;
+        display: block;
+        text-decoration: none;
+        color: #101828;
+        &:hover {
+          background-color: #d0d5dd;
+        }
+      }
+    }
+  }
+}
