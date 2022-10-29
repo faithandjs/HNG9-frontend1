@@ -1,8 +1,11 @@
 button {
   background-color: unset;
   border: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
-.box {
+#box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +14,7 @@ button {
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
-  .share_btn {
+  #share_btn {
     border: 1px dashed grey;
     width: 40px;
     height: 40px;
@@ -22,13 +25,13 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    .mobile {
+    #mobile {
       display: none;
     }
   }
   section#profile {
     position: relative;
-    .img-box {
+    #img-box {
       img {
         width: 200px;
         height: 200px;
@@ -75,13 +78,13 @@ button {
   }
 }
 @media screen and (max-width: 620px) {
-  .box {
-    .share_btn {
+  #box {
+    #share_btn {
       right: 20px;
-      .web {
+      #web {
         display: none;
       }
-      .mobile {
+      #mobile {
         display: block;
       }
     }

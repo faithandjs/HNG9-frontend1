@@ -12,43 +12,76 @@ import "./style.scss";
 
 export default function Index() {
   return (
-    <div className='box'>
+    <div id='box'>
       {" "}
       <div id='sections'>
         <section id='profile'>
-          <button className='share_btn'>
-            <img src={mobile_share} alt='share button' className='mobile' />
-            <img src={web_share} alt='share button' className='web' />
+          <button id='share_btn'>
+            <img src={mobile_share} alt='share button' id='mobile' />
+            <img src={web_share} alt='share button' id='web' />
           </button>
-          <div className='img-box'>
-            <img src={me} alt='' />
+          <div id='img-box'>
+            <img src={me} alt='' id='profile__img' />
           </div>
-          <p>Okogbo Faith</p>
+          <p id='slack'>faithandjs</p>
         </section>
         <section id='links'>
           <button>
-            <a href=' https://twitter.com/hotgirldeba' target='_blank'>
+            <a
+              href=' https://twitter.com/hotgirldeba'
+              target='_blank'
+              rel='noreferrer'
+              id='twitter'>
               Twitter Link
             </a>
           </button>
           <button>
-            <a href='https://training.zuri.team/ '>Zuri Team</a>
+            <a
+              href='https://training.zuri.team/ '
+              target='_blank'
+              rel='noreferrer'
+              id='btn__zuri'>
+              Zuri Team
+            </a>
           </button>
           <button>
-            <a href='http://books.zuri.team/ '>Zuri Books</a>
+            <a
+              href='http://books.zuri.team/ '
+              target='_blank'
+              rel='noreferrer'
+              id='books'
+              title='Zuri Books has always been my go-to for books on design. They never fail!'>
+              Zuri Books
+            </a>
           </button>
           <button>
-            <a href=' https://books.zuri.team/'>Python Books</a>
+            <a
+              href=' https://books.zuri.team/python-for-beginners?ref_id=faithandjs'
+              target='_blank'
+              rel='noreferrer'
+              id='book__python'>
+              Python Books
+            </a>
           </button>
           <button>
-            <a href='https://background.zuri.team/ '>
+            <a
+              href='https://background.zuri.team/ '
+              target='_blank'
+              rel='noreferrer'
+              id='pitch'>
               Background Check for Coders
             </a>
           </button>
           <button>
-            <a href='https://books.zuri.team/design-rules '>Design Books</a>
+            <a
+              href='https://books.zuri.team/design-rules '
+              target='_blank'
+              rel='noreferrer'
+              id='book__design'>
+              Design Books
+            </a>
           </button>
-          <div className='logos'>
+          <div id='logos'>
             <img src={slack} alt='Slack logo' />
             <img src={github} alt='Github logo' />
           </div>
