@@ -1,14 +1,12 @@
 import React from "react";
 
-import I4g from "../assets/I4G.svg";
-import zuri from "../assets/Zuri.Internship_Logo.svg";
 import slack from "../assets/slack.svg";
 import github from "../assets/Icon.svg";
 import me from "../assets/me.jpg";
 import mobile_share from "../assets/mobile_share.svg";
 import web_share from "../assets/web_share.svg";
-
-import "./style.scss";
+import { Link } from "react-router-dom";
+import "../styles/style.scss";
 
 export default function Index() {
   return (
@@ -81,17 +79,15 @@ export default function Index() {
               Design Books
             </a>
           </button>
+          <button>
+            <Link to='contact'>Contact</Link>
+          </button>
           <div id='logos'>
             <img src={slack} alt='Slack logo' />
             <img src={github} alt='Github logo' />
           </div>
         </section>{" "}
       </div>
-      <footer>
-        <img src={zuri} alt='Zuri Internship logo' />
-        <p>HNG Internship 9 Frontend Task</p>
-        <img src={I4g} alt='Ingressive for Good logo' />
-      </footer>
     </div>
   );
 }
