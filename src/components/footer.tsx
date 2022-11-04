@@ -2,7 +2,9 @@ import React from "react";
 
 import I4g from "../assets/I4G.svg";
 import zuri from "../assets/Zuri.Internship_Logo.svg";
+
 import "../styles//footer.scss";
+
 export default function Footer() {
   return (
     <footer>

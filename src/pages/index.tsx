@@ -11,7 +11,6 @@ import "../styles/style.scss";
 export default function Index() {
   return (
     <div id='box'>
-      {" "}
       <div id='sections'>
         <section id='profile'>
           <button id='share_btn'>
