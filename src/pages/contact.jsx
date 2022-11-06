@@ -49,7 +49,7 @@ export default function Contact() {
             You agree to providing your data to faithandjs who may contact you
           </label>
         </div>
-        <button type='submit'>Send Message</button>
+        <button type='submit' id='btn__submit'>Send Message</button>
       </form>
     </div>
   );
