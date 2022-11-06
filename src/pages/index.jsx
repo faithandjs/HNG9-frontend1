@@ -79,7 +79,7 @@ export default function Index() {
             </a>
           </button>
           <button>
-            <Link to='contact'>Contact</Link>
+            <Link to='contact' id='contact' >Contact</Link>
           </button>
           <div id='logos'>
             <img src={slack} alt='Slack logo' />
