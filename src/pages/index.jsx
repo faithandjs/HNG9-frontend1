@@ -2,7 +2,7 @@ import React from "react";
 
 import slack from "../assets/slack.svg";
 import github from "../assets/Icon.svg";
-import me from "../assets/me.jpg";
+import me from "../assets/me.jpeg";
 import mobile_share from "../assets/mobile_share.svg";
 import web_share from "../assets/web_share.svg";
 import { Link } from "react-router-dom";

@@ -1,6 +1,6 @@
 input,
 textarea {
-  border: 1px solid #9e9e9e !important;
+  border: 1px solid #d0d5dd !important;
   outline: none;
   border-radius: 7px;
 }
@@ -9,6 +9,7 @@ textarea {
   width: 700px;
   margin: 0 auto;
   text-align: start;
+  font-weight: 300;
   p {
     font-size: 1.1rem;
   }
@@ -19,7 +20,7 @@ textarea {
       label {
         display: block;
         padding-bottom: 10px;
-        font-weight: 600;
+        font-weight: 400;
       }
       input,
       textarea {
@@ -29,6 +30,10 @@ textarea {
         & ::placeholder {
           color: #9e9e9e;
         }
+        &:active,
+        &:focus {
+          border-color: #84caff !important;
+        }
       }
       input {
         height: 40px;
@@ -36,6 +41,10 @@ textarea {
       textarea {
         height: 150px;
         resize: none;
+        &:active,
+        &:focus {
+          box-shadow: 0px 0px 2px 5px #84caff4d;
+        }
       }
     }
 
@@ -52,10 +61,44 @@ textarea {
       display: flex;
       align-items: center;
       padding-bottom: 15px;
-      input {
+      span {
+        position: relative;
         width: 20px;
         height: 20px;
+        border-radius: 5px;
+        border: 1px solid #d0d5dd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all;
+        transition-duration: 150ms;
+
+        img {
+          opacity: 0;
+          transition: all;
+          transition-duration: 150ms;
+        }
+        &.check {
+          border-color: #1570ef;
+          img {
+            opacity: 1;
+          }
+        }
+        input {
+          opacity: 0;
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
+
       label {
         display: inline-block;
         padding-left: 6px;
@@ -63,7 +106,7 @@ textarea {
       }
     }
     button {
-      background-color: rgb(89, 107, 239);
+      background-color: #1570ef;
       border-radius: 7px;
       color: white;
       width: 100%;
@@ -76,6 +119,7 @@ textarea {
 @media screen and (max-width: 620px) {
   .contact {
     width: 100%;
+    padding-top: 20px;
   }
 }
 @media screen and (max-width: 425px) {

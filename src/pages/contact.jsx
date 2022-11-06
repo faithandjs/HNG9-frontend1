@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+
+import check from "../assets/check.svg";
 
 import "../styles/contact.scss";
 
 export default function Contact() {
+  const [text, setText] = useState("");
+  const [agreed, setAgreed] = useState(false);
+
   return (
     <div className='contact'>
       <h1>Contact Me</h1>
@@ -40,16 +45,36 @@ export default function Contact() {
         <div className='input_box'>
           <label htmlFor='message'>Message</label>
           <textarea
+            required
             id='message'
+            onClick={() =>
+              setText(
+                "Hey {name}, hope you are doing great. Let us collaborate on project xyz."
+              )
+            }
+            onChange={(e) => setText(e.target.value)}
+            value={text}
             placeholder="Send a message and I'll respond as soon as possible..."></textarea>
         </div>
         <div className='check_box'>
-          <input type='checkbox' id='agree' required />
+          <span className={agreed ? "check" : ""}>
+            <img src={check} alt='check mark' />
+            <input
+              type='checkbox'
+              id='agree'
+              required
+              onChange={(e) => {
+                setAgreed(e.target.checked);
+              }}
+            />
+          </span>
           <label htmlFor='agree'>
             You agree to providing your data to faithandjs who may contact you
           </label>
         </div>
-        <button type='submit'>Send Message</button>
+        <button type='submit' id='btn__submit'>
+          Send Message
+        </button>
       </form>
     </div>
   );
